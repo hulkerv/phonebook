@@ -1,5 +1,6 @@
-const {Router} = require('express');
-const router = Router();
+const {Router} = require('express')
+const router = Router()
+const morgan = require('morgan')
 let persons = require('../database')
 
 // Index
@@ -53,7 +54,7 @@ router.post('/api/persons', (req,res) => {
 	}
 
 	persons = [...persons, newPerson]
-	
+
 	res.status(201).json(newPerson)
 } );
 
