@@ -1,24 +1,16 @@
-let persons = [
-    {
-        id: 1,
-        name:"Arto Hellas",
-        number: 040123456
-    },
-    {
-        id: 2,
-        name:"Ada Lovelace",
-        number: 39445323523
-    },
-    {
-        id: 3,
-        name:"Dan Abranov",
-        number:1243234345
-    },
-    {
-        id: 4,
-        name:"Mary Poppendick",
-        number:39236423122
-    }
-]
+const mongoose = require('mongoose')
 
-module.exports = persons
+const {MONGO_DB_URI} = process.env
+
+mongoose.connect(MONGO_DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+})
+    .then(db =>{
+        console.log('Database is connected')
+})
+    .catch(err =>{
+        console.log(err)
+})

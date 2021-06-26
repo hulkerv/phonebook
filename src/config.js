@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express()
 
 // Settings
-app.set('port', process.env.PORT || 3001)
+app.set('port', process.env.PORT)
 
 // Middlewares
 app.use(express.urlencoded({extended:false}))
@@ -19,6 +19,6 @@ app.use(morgan(":method :url :status :res[content-length] - :response-time ms :r
 app.use(cors())
 
 // Routes
-app.use(require('./routes/index.routes'))
+app.use('/api/persons',require('./routes/persons.routes'))
 
 module.exports = app
