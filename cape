@@ -1,0 +1,37 @@
+[33mcommit e951e045c77a5dc783eeb13a4743c0e227956b94[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Hulker <vegat.kevinj@gmail.com>
+Date:   Fri Jun 25 23:07:39 2021 -0400
+
+    Revert "add .env"
+    
+    This reverts commit 97b305445dc1173ca88ea5c8ab1a4ae0fa34f18b.
+
+[33mcommit 97b305445dc1173ca88ea5c8ab1a4ae0fa34f18b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: Hulker <vegat.kevinj@gmail.com>
+Date:   Fri Jun 25 22:52:04 2021 -0400
+
+    add .env
+
+[33mcommit 57596ad06639c362ec4b85349e610b20a68ce1ed[m
+Author: Hulker <vegat.kevinj@gmail.com>
+Date:   Fri Jun 25 22:31:12 2021 -0400
+
+    creacion de variables de entorno, conexion a base de datos con mongoose, construccion de modelo de notas, reconfiguración de los controles
+
+[33mcommit e2841347c87ff93e8aae1a89456a236a340b37b1[m
+Author: Hulker <vegat.kevinj@gmail.com>
+Date:   Sat Jun 12 18:58:10 2021 -0400
+
+    phonebook backend step 10: add Procfile heroku
+
+[33mcommit d30ffda439079ac05ebbf5773c0d414f6b1e4d85[m
+Author: Hulker <vegat.kevinj@gmail.com>
+Date:   Sat Jun 12 18:08:33 2021 -0400
+
+    phonebook backend step 7-9
+
+[33mcommit c1a0b3d44b826a185295512f21313668a115754f[m
+Author: Hulker <vegat.kevinj@gmail.com>
+Date:   Fri Jun 11 22:26:09 2021 -0400
+
+    phonebook backend step 1-6
