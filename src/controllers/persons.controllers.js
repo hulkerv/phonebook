@@ -1,4 +1,3 @@
-let persons = []
 const Person =  require('../models/Person')
 const personsCtrls = {}
 
@@ -25,25 +24,22 @@ personsCtrls.getOne = async ( req, res, next ) => {
 
 // Create Person
 personsCtrls.createPerson = async ( req, res, next ) => {
-    try{ 
         const { name, number } = req.body
-        
-        if(!name) res.status(400).json({error: "name is missing"})
-        if(!number) res.status(400).json({error: "number is missing"})
+
+        if(!name) return res.status(400).json({error: "name is missing"})
+        if(!number) return res.status(400).json({error: "number is missing"})
         
         const newPerson = new Person({
             name,
             number,
             date: new Date()
         })
-        
+
+    try{ 
         const savedPerson = await newPerson.save()
-	    res.status(201).json(savedPerson)
-        
-    }catch(err){
-        
-        next(err)
-        
+	    res.status(201).json(savedPerson)  
+    }catch(error){
+        res.status(400).json(error)
     }
 }
 

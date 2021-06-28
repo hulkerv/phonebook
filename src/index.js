@@ -8,4 +8,6 @@ const app = require('./config')
 require('./database')
 
 // Start the server
-app.listen(app.get('port'), ( ) => console.log(`Server on por ${app.get('port')}`))
+const server = app.listen(app.get('port'), ( ) => console.log(`Server on por ${app.get('port')}`))
+
+module.exports = {app, server}

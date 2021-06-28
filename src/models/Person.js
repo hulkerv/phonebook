@@ -1,8 +1,15 @@
+const uniqueValidator = require('mongoose-unique-validator')
 const {Schema, model} = require('mongoose')
 
 const personSchema = new Schema({
-    name: String,
-    number: Number,
+    name: {
+        type:String,
+        unique:true
+    },
+    number: {
+        type:Number,
+        unique:true
+    },
     date: Date
 })
 
@@ -13,5 +20,7 @@ personSchema.set('toJSON', {
         delete returnedObject.__v
     }
 })
+
+personSchema.plugin(uniqueValidator)
 
 module.exports = model('Person', personSchema)
